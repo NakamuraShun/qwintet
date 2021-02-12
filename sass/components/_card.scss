@@ -253,7 +253,8 @@ _card.scss
     .seminarList{
         @include fxcol;
         @include --fxwrap;
-        max-height: 500px; 
+        max-height: 500px;
+        flex: 1 0 500px;  //ie対策で試験的に追加してみた
         
         li{
             width: 50%;

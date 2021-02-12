@@ -356,7 +356,7 @@ body.is-fix {
             
             &__lnk{
                 font-size: 1.2rem;     
-                & span{ padding-right: 5px; }
+                & i{ padding-right: 5px; }
                 &:hover{ border-bottom: 1px solid $color-b1; }
             }
         }
@@ -478,8 +478,9 @@ body.is-fix {
         }
         
         td{
+            display: inline-block;
             padding-top: 10px;
-            padding-right: 40px;
+            padding-right: 20px;
         }
     }
 }

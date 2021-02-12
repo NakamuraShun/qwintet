@@ -301,3 +301,14 @@ input[type="text"],input[type="email"],input[type="tel"],input[type="password"],
     color:#888;
 }
 
+
+
+
+
+//ie対策で試験的に追加してみた
+.tbl-base--column th,
+.tbl-base--column td {
+    display: block;
+    width: 100%;
+    word-break: break-all;
+}

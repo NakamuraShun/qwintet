@@ -330,6 +330,13 @@ input[type=text], input[type=email], input[type=tel], input[type=password], text
   color: #888;
 }
 
+.tbl-base--column th,
+.tbl-base--column td {
+  display: block;
+  width: 100%;
+  word-break: break-all;
+}
+
 /*
 _base.scss
 *******************************************************************************************************************/
@@ -1976,7 +1983,7 @@ body.is-fix .globalNavSP__bg {
   .gNavPcSub .gNavPcSubInfo__lnk {
     font-size: 1.2rem;
   }
-  .gNavPcSub .gNavPcSubInfo__lnk span {
+  .gNavPcSub .gNavPcSubInfo__lnk i {
     padding-right: 5px;
   }
   .gNavPcSub .gNavPcSubInfo__lnk:hover {
@@ -2118,8 +2125,9 @@ body.is-fix .globalNavSP__bg {
   padding-bottom: 10px;
 }
 .MegaNav__searchBox td {
+  display: inline-block;
   padding-top: 10px;
-  padding-right: 40px;
+  padding-right: 20px;
 }
 
 /* searchBox
@@ -2412,12 +2420,15 @@ _footer.scss
 .footerWrap .footerInfo {
   color: #fff;
   padding-left: 1.5em;
-  text-indent: -1.5em;
+}
+.footerWrap .footerInfo li {
+  padding-left: 1.5em;
+  text-indent: -1em;
 }
 .footerWrap .footerInfo__lnk {
   color: #fff;
 }
-.footerWrap .footerInfo span {
+.footerWrap .footerInfo i {
   margin-right: 5px;
   color: #b40015;
   font-weight: bold;
@@ -3223,6 +3234,7 @@ _card.scss
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     max-height: 500px;
+    flex: 1 0 500px;
   }
   .seminarList li {
     width: 50%;
