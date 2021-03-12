@@ -1,40 +1,5 @@
 $(function ()
 {
-    
-/* scrollResize globalNav
--------------------------------------------------------------------- */
-    
-    /*
-
-SPナビ実装後に再調整 heightの調整必要あり?
-
-    $(window).on('scroll', function ()
-    {
-        let scrollTopDis = $(window).scrollTop();
-        if (scrollTopDis > 200)
-        {
-            $(".gNavPcSub").addClass("gNavPcSub--scroll");
-        } else
-        {
-            $(".gNavPcSub").removeClass("gNavPcSub--scroll");
-        }
-    });
-
-    */
-    
-    /* open mega Menu
-    -------------------------------------------------------------------- */
-    $(".js-megaNavTrigger").on({
-        'mouseenter': function ()
-        {
-            $(this).find(".megaMenu").stop().slideDown(200);
-        },
-        'mouseleave': function ()
-        {
-            $(this).find(".megaMenu").stop().slideUp(200);
-        }
-    });
-
 
     /* humberger menu
 -------------------------------------------------------------------- */
@@ -88,45 +53,6 @@ SPナビ実装後に再調整 heightの調整必要あり?
 
         return false;
 
-    });
-
-
-    /* slick.js
-    -------------------------------------------------------------------- */
-    $('.caseSlide').slick({
-        dots: true,
-        infinite: true, //ループ
-        speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        responsive: [
-            {
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
     });
 
 

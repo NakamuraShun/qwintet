@@ -1,6 +1,22 @@
 /*
 _mixin.scss
 *******************************************************************************************************************/
+/*======================================================================
+GRADIENT
+======================================================================*/
+@mixin gradient-bg-t1{
+    background-image: -moz-linear-gradient( 135deg, rgb(247,15,255) 0%, rgb(18,214,223) 100%);
+    background-image: -webkit-linear-gradient( 135deg, rgb(247,15,255) 0%, rgb(18,214,223) 100%);
+    background-image: -ms-linear-gradient( 135deg, rgb(247,15,255) 0%, rgb(18,214,223) 100%);
+}
+
+@mixin gradient-txt-t1{
+    background-image: -moz-linear-gradient( 135deg, rgb(247,15,255) 0%, rgb(18,214,223) 100%);
+    background-image: -webkit-linear-gradient( 135deg, rgb(247,15,255) 0%, rgb(18,214,223) 100%);
+    background-image: -ms-linear-gradient( 135deg, rgb(247,15,255) 0%, rgb(18,214,223) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
 /*======================================================================
 FLEX
@@ -281,7 +297,12 @@ FLEX
     @include --fxjty-between;
 }
 
-
+@mixin fxcol-ac-jsa{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxain-center;
+    @include --fxjty-around;
+}
 
 
 

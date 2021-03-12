@@ -11,17 +11,17 @@ _layout.scss
 
 /*  ***Wrap
 -------------------------------------------------- */
-[class*="Wrap"] {padding: 50px 0;}
+[class*="Wrap"] {padding: 30px 0;}
 
-@media (min-width: $bp-md) {[class*="Wrap"] {padding: 50px 0;}}
-@media (min-width: $bp-lg) {[class*="Wrap"] {padding: 50px 0;}}
+@media (min-width: $bp-md) {[class*="Wrap"] {padding: 120px 0;}}
+@media (min-width: $bp-lg) {[class*="Wrap"] {padding: 120px 0;}}
 
 /*  .l-container
 -------------------------------------------------- */
 .l-container {
     margin-right: auto;
     margin-left: auto;
-    max-width: 1100px;
+    max-width: 1200px;
     padding-right: $container-p;
     padding-left: $container-p;
     position: relative;
@@ -41,45 +41,34 @@ _layout.scss
 /* -----------------------------------------------
 /* topPage     [h-***]
 -------------------------------------------------- */
-/* #h-QUISTION
+/* #h-MISSION
 -------------------------------------------------- */
-#h-QUISTION .quistionWrap{
+#h-MISSION .missionWrap{
     position: relative;
     padding: 35px 0 !important;
-    color: #fff;
-    background-color: #b40015;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23922222' fill-opacity='0.75' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    
-    &::after{
-        content: "";
-        position: absolute;
-        bottom:-15px;
-        left:50%;
-        margin-left: -15px;
-        width: 30px;
-        height: 30px;
-        background-color: #b40015;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23922222' fill-opacity='0.75' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-        @include transform-ro(45deg);
-        
-    }
-}
-
-/* #h-FEATURE
--------------------------------------------------- */
-#h-FEATURE .introductionWrap{
-    padding: 0 0 !important;
-}
-
-#h-FEATURE .pointWrap{
-    padding: 25px 0 !important;
 }
 
 @media (min-width: $bp-md) {
+    #h-MISSION .l-container{
+        max-width: 800px;
+    }
+}
+
+/* #h-SERVICE
+-------------------------------------------------- */
+#h-SERVICE .serviceWrap{
     
-    #h-FEATURE .introductionWrap{
+    .serviceContent{
+        padding: 200px 0px;
+        background-color: #f7f7f7;
+    }
+    
+
+}
+
+@media (min-width: $bp-md) {
+    #h-SERVICE .serviceWrap{
         
-        .wrap-btn{justify-content: flex-start;}
     }
 }
 

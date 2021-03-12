@@ -6,15 +6,17 @@ _base.scss
 -------------------------------------------------- */
 /* base */
 $color-b1 : #333;
-// $color-b1 : #494949;
 $color-g0 : #c4c4c4;
 $color-g1 : #f4f4f4;
 $color-g2 : #e9e9e9;
 $color-g3 : #c8c8c8;  //最後に消す
 /* thema */
-$color-t1 : #b40015;
+$color-t1 : #69318f;
 /* sub */
 $color-s1 : #f9b301;
+
+
+
 
 /*  BlakePoint
 // -------------------------------------------------- */
@@ -36,9 +38,10 @@ html{
 body {
     background-color: #fff;
     color: $color-b1;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.4rem;
-    line-height: 1.75;
+    line-height: 2.3;
+    letter-spacing: 1.5px;
     width: 100%;
     font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", YuGothic, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
@@ -220,3 +223,15 @@ li img, li a, li a img {
 @media (min-width: $bp-md){.ta-md-l{text-align:left!important}.ta-md-c{text-align:center!important}.ta-md-r{text-align:right!important}.ta-md-j{text-align:justify!important}.va-md-sup{vertical-align:super!important}.va-md-t{vertical-align:top!important}.va-md-tt{vertical-align:text-top!important}.va-md-m{vertical-align:middle!important}.va-md-bl{vertical-align:baseline!important}.va-md-tb{vertical-align:text-bottom!important}.va-md-b{vertical-align:bottom!important}.va-md-sub{vertical-align:sub!important}}
 @media (min-width: $bp-lg){.ta-lg-l{text-align:left!important}.ta-lg-c{text-align:center!important}.ta-lg-r{text-align:right!important}.ta-lg-j{text-align:justify!important}.va-lg-sup{vertical-align:super!important}.va-lg-t{vertical-align:top!important}.va-lg-tt{vertical-align:text-top!important}.va-lg-m{vertical-align:middle!important}.va-lg-bl{vertical-align:baseline!important}.va-lg-tb{vertical-align:text-bottom!important}.va-lg-b{vertical-align:bottom!important}.va-lg-sub{vertical-align:sub!important}}
 @media (min-width: $bp-xl){.ta-xl-l{text-align:left!important}.ta-xl-c{text-align:center!important}.ta-xl-r{text-align:right!important}.ta-xl-j{text-align:justify!important}.va-xl-sup{vertical-align:super!important}.va-xl-t{vertical-align:top!important}.va-xl-tt{vertical-align:text-top!important}.va-xl-m{vertical-align:middle!important}.va-xl-bl{vertical-align:baseline!important}.va-xl-tb{vertical-align:text-bottom!important}.va-xl-b{vertical-align:bottom!important}.va-xl-sub{vertical-align:sub!important}}
+
+
+//br
+.br-sm,.br-md,.br-lg,.br-xl{display: none;}
+@media (min-width: $bp-sm){.br-sm{display: block!important}}
+@media (min-width: $bp-md){.br-md{display: block!important}}
+@media (min-width: $bp-lg){.br-lg{display: block!important}}
+@media (min-width: $bp-xl){.br-xl{display: block!important}}
+
+// @media (max-width: $bp-md) {
+    //     [class*="prg-"] .richtext p br {display: none;}
+    // }

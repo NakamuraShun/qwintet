@@ -7,10 +7,9 @@ _typography.scss
 -------------------------------------------------- */
 [class*="prg-"] {margin-bottom: 15px;}
 .prg-xl {font-size: 1.8rem;line-height: 2.0; font-weight: 500;}
-.prg-l {font-size: 1.6rem;line-height: 1.8;}
+.prg-l {font-size: 2.0rem;line-height: 1.8;}
 .prg-m {font-size: 1.4rem;line-height: 1.8;}
-.prg-s {font-size: 1.3rem;line-height: 1.8;}
-.prg-xs {font-size: 1.1rem;line-height: 1.5;}
+.prg-s {font-size: 1.2rem;line-height: 1.5; font-weight: 400;}
 
 [class*="prg-"] .richtext p a {
     text-decoration: underline;
@@ -19,90 +18,202 @@ _typography.scss
 @media (min-width: $bp-md) {
     [class*="prg-"] {margin-bottom: 20px;}
     .prg-xl {font-size: 2.0rem; line-height: 2.0;}
-    .prg-l  {font-size: 1.8rem; line-height: 1.8;}
+    .prg-l  {font-size: 2.5rem; line-height: 2.2;}
     .prg-m  {font-size: 1.5rem; line-height: 1.8;}
-    .prg-s  {font-size: 1.3rem; line-height: 1.8;}
-    .prg-xs {font-size: 1.1rem; line-height: 1.5;}
+    .prg-s  {font-size: 1.2rem; line-height: 1.5;}
 }
 
-@media (max-width: $bp-md) {
-    [class*="prg-"] .richtext p br {display: none;}
-}
-
-/* -----------------------------------------------
-/* decoration
--------------------------------------------------- */
-.markBg--yellow{
-    background-color: $color-s1;
-    font-weight: 500;
-}
-
-.ul-white{
-    padding-bottom: 5px;
-    border-bottom: 1px solid #fff;
-}
-
-.ul-yellow{
-    border-bottom: 3px solid $color-s1;
-}
-
-/* -----------------------------------------------
-/* Title    [ttl-***]
--------------------------------------------------- */
-
-/* ttl-lvl2
--------------------------------------------------- */
-.ttl-lvl2 {
-    padding-top: 0;
-    padding-bottom: 20px;
-    text-align: center;
+// @media (max-width: $bp-md) {
+    //     [class*="prg-"] .richtext p br {display: none;}
+    // }
     
-    & > [class*="hdg-"] {
-        font-weight:700;
+    
+    /* -----------------------------------------------
+    /* Title    [ttl-***]
+    -------------------------------------------------- */
+    
+    /* ttl-lvl2
+    -------------------------------------------------- */
+    .ttl-lvl2--mission,
+    .ttl-lvl2--service,
+    .ttl-lvl2--about {
+        position: relative;
+        margin-bottom: 60px;
+        
+        & > [class*="hdg-"] {
+            color: #535353;
+            font-weight:600;
+            line-height: 1.5;
+        }
+        
+        &::before{ 
+            content: "";
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            @include gradient-txt-t1;
+            opacity: .3;
+        }
+        
+        &::after{
+            content: "";
+            display:block;
+            position:absolute;
+            bottom: -30px;
+            height: 4px;
+            width: 65px;
+            @include gradient-bg-t1;
+            opacity: .6;
+        }
     }
-}
-
-@media (min-width: $bp-md) {
-    .ttl-lvl2 {
-        padding-top: 10px;
+    
+    .ttl-lvl2--mission::before{content: 'mission';}
+    .ttl-lvl2--service::before{content: 'service';}
+    .ttl-lvl2--about::before{content: 'about us';}
+    
+    
+    @media (min-width: $bp-md) {
+        .ttl-lvl2--mission,
+        .ttl-lvl2--service,
+        .ttl-lvl2--about {
+            margin-bottom: 80px;
+            
+            & > [class*="hdg-"] {
+                font-weight:600;
+                letter-spacing: 2px;
+            }
+            
+            &::before{ 
+                content: "";
+                font-size: 11rem;
+                font-weight: 600;
+                letter-spacing: 4px;
+                opacity: .2;
+            }
+            
+            &::after{
+                content: "";
+                bottom: -45px;
+            }
+        }
+        
+        .ttl-lvl2--mission{
+            &::before{ 
+                content: "mission";
+                position:absolute;
+                top: 130px;
+                left: -385px;
+                @include transform-ro(90deg);
+            }
+        }
+        
+        .ttl-lvl2--service{
+            &::before{ 
+                content: "service";
+                position:absolute;
+                top: 230px;
+                left: -5px;
+            }
+        }
+        
+        .ttl-lvl2--about{
+            text-align: center;
+            
+            &::before{ 
+                content: "about us";
+                position:absolute;
+                top: -180px;
+                right: 300px;
+            }
+            
+            &::after{
+                position:absolute;
+                right: 50%;
+            }
+        }
+    }
+    
+    /* ttl-lvl3
+    -------------------------------------------------- */
+    .ttl-lvl3 {
+        position: relative;
+        margin-bottom: 30px;
+        
+        & > [class*="hdg-"] {
+            color: #333;
+            font-weight:500;
+            line-height: 1.5;
+        }
+        
+        &::before{ 
+            content: "#01";
+            position:absolute;
+            top: -45px;
+            color: #bdbdbd;
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+    }
+    
+    @media (min-width: $bp-md) {
+        .ttl-lvl3 {
+            margin-bottom: 45px;
+            
+            &::before{ 
+                position:absolute;
+                top: -65px;
+                font-size: 4rem;
+            }
+        }
+    }
+    
+    
+    /* ttl-lvl4
+    -------------------------------------------------- */
+    .ttl-lvl4 {
+        position: relative;
+        padding-left: 10px;
         padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-left: 4px solid;
+        border-image: linear-gradient( 180deg, rgb(247,15,255) 0%, rgb(18,214,223) 100%);
+        border-image-slice: 1;
+        
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background-color: #d6d6d6;
+        }
+        
+        & > [class*="hdg-"] {
+            font-weight:500;
+            line-height: 1.5;
+        }
+        
     }
-}
-
-/* ttl-lvl3
--------------------------------------------------- */
-.ttl-lvl3 {
-    padding-top: 0;
-    margin-bottom: 20px;
-    border-left: 8px solid $color-t1;
     
-    & > [class*="hdg-"] {
-        font-weight:700;
-        padding-left: 5px;
-        line-height: 1.1;
-        letter-spacing: 1.5px;
+    @media (min-width: $bp-md) {
+        .ttl-lvl4 {
+            margin-bottom: 15px;
+        }
     }
-}
-
-@media (min-width: $bp-md) {
     
-}
-
-
-/* -----------------------------------------------
-/* Headings  [hdg-***]
--------------------------------------------------- */
-// .hdg-0 {font-size: 4.0rem;}
-// .hdg-1 {font-size: 3.5rem;}
-.hdg-2 {font-size: 3.0rem;}
-.hdg-3 {font-size: 2.0rem;}
-.hdg-4 {font-size: 1.6rem;}
-
-@media (min-width: $bp-md) {
-    // .hdg-0 {font-size: 4.5rem;}
-    // .hdg-1 {font-size: 4.0rem;}
-    .hdg-2 {font-size: 3.5rem; line-height: 1.75;}
-    .hdg-3 {font-size: 2.2rem;}
+    
+    /* -----------------------------------------------
+    /* Headings  [hdg-***]
+    -------------------------------------------------- */
+    .hdg-2 {font-size: 3.0rem;}
+    .hdg-3 {font-size: 2.5rem;}
     .hdg-4 {font-size: 1.8rem;}
-}
-
+    
+    @media (min-width: $bp-md) {
+        .hdg-2 {font-size: 5.0rem; line-height: 1.75;}
+        .hdg-3 {font-size: 4.0rem;}
+        .hdg-4 {font-size: 2.0rem;}
+    }
+    
+    
