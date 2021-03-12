@@ -38,6 +38,16 @@ _link.scss
     transform: perspective(1px) translateZ(0);
     @include transition(.1s);
     
+    span{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 15px;
+        @include fxrow-ac;
+        -ms-flex-align: center;
+        font-size: 1.4rem;
+    }
+    
     &:hover{
         opacity: .8;
     }

@@ -36,13 +36,29 @@ _page.scss
 /*  serviceContent
 -------------------------------------------------- */
 .serviceContent{
+    padding-top: 150px;
+    padding-bottom: 1px;
+    margin-top: -100px;
+    background-color: #f7f7f7;
+    
+    /*  service0* 共通 */
     .service01,
     .service02,
     .service03{
+        position: relative;
+        padding: 30px 15px;
+        margin-bottom: 350px;
         background-color: #fff;
+        box-shadow: 20px 20px 60px rgb(0 0 0 / 10%);
+        
+        &__lead{
+            margin-bottom: 45px;
+        }
         
         &__content{
-            .row [class*="col"]{margin-bottom: 40px;}
+            .row [class*="col"]:not(:last-child){
+                margin-bottom: 50px;
+            }
         }
         
         /*  serviceDesc */
@@ -54,7 +70,10 @@ _page.scss
         }
         .serviceDesc__photo{
             @include po--ac;
-            @include bgimg--cv("../images/service--01.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: #111;
             width: 100%;
             height: 100%;
         }
@@ -67,13 +86,12 @@ _page.scss
                 padding: 15px;
                 margin-right: auto;
                 margin-left: auto;
-                border: 2px solid #183784;
+                border: 2px solid;
                 @include fxcol-ac-jsa;
                 text-align: center;
                 h5{
                     font-size: 1.7rem;
                     font-weight: 500;
-                    color: #183784;
                 }
                 p{text-align: left;}
             }
@@ -90,17 +108,91 @@ _page.scss
             }
         }
     }
+    
+    /*  service0* オリジナル */
+    .service01{
+        .ttl-lvl3{
+            &::before{ content: "#01";} 
+        }
+        
+        .serviceService{
+            &__content{
+                border-color: #183784;
+                h5{color: #183784;}
+            }
+        }
+        
+        &__illustBg{
+            width: 300px;
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+            position: absolute;
+            bottom: -280px;
+            right:50%;
+            transform: translateX(50%);
+            
+            img{width: 100%;}
+        }
+    }
+    
+    .service02{
+        .ttl-lvl3{
+            &::before{ content: "#02";} 
+        }
+        
+        .serviceService{
+            &__content{
+                border-color: #dd7e8e;
+                h5{color: #dd7e8e !important;}
+            }
+        }
+        
+        &__illustBg{
+            width: 300px;
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+            position: absolute;
+            bottom: -340px;
+            right:50%;
+            transform: translateX(50%);
+            
+            img{width: 100%;}
+        }
+    }
+    
+    .service03{
+        .ttl-lvl3{
+            &::before{ content: "#03";} 
+        }
+        
+        &__illustBg{
+            width: 340px;
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+            position: absolute;
+            bottom: -280px;
+            right:50%;
+            transform: translateX(50%);
+            
+            img{width: 100%;}
+        }
+    }
 }
 
 
 @media (min-width: $bp-md) {
     .serviceContent{
+        padding-top: 200px;
+        
+        /*  service0* 共通 */
         .service01,
         .service02,
         .service03{
-            &__content{
-                .row [class*="col"]{margin-bottom: 50px;}
-            }
+            padding: 0 30px;
+            margin-bottom: 280px;
             
             .serviceDesc{
                 &__img{margin-top: 50px;}
@@ -125,81 +217,110 @@ _page.scss
                     dd{font-size: 1.4rem; line-height: 1.7;}
                 } 
             }
-        } 
-    }
-}
-
-
-
-
-
-
-/*  news
--------------------------------------------------- */
-.newsContainer{
-    height: 200px;
-    overflow-y: scroll; 
-    font-size: 1.2rem;
-}
-
-.news{
-    &__content {
-        @include fxrow;
-        @include --fxwrap;
-        margin-bottom: 5px;
-    }
-    
-    &__date {
-        display: inline-block;
-        margin-right: 10px;
-        padding: 5px 0;
-        font-weight: 500;
-        color: $color-g0;
-        
-    }
-    
-    &__tag--news {
-        margin-right: 10px;
-        padding: 5px 0;
-        
-        span {
-            padding: 0 3px;
-            border-radius: 5px;
-            font-size: .8em;
-            font-weight: 400;
-            color: #fff;
-            background-color: $color-b1;
-        }
-    }
-}
-
-
-@media (min-width: $bp-md) {
-    .newsContainer{
-        height: 240px;
-        overflow-y: scroll; 
-        font-size: 1.5rem;
-    }
-    .news{
-        &__content {
-            margin-bottom: 7px;
         }
         
-        &__date {
-            margin-right: 20px;
-        }
         
-        &__tag--news {
-            margin-right: 30px;
-        }
-        
-        &__txt {
-            width: calc(100% - 20em);
-            padding: 5px 0;
+        /*  service0* オリジナル */
+        .service01{
+            .ttl-lvl3{
+                &::before{ content: "#01";} 
+            }
             
-            &:hover{
-                text-decoration: underline;
+            .serviceService{
+                &__content{
+                    border-color: #183784;
+                    h5{color: #183784;}
+                }
+            }
+            
+            &__illustBg{
+                width: 400px;
+                bottom: -240px;
+                right:-130px;
+                transform: translateX(0%);
+            }
+        }
+        
+        .service02{
+            .ttl-lvl3{
+                &::before{ content: "#02";} 
+            }
+            
+            .serviceService{
+                &__content{
+                    border-color: #dd7e8e;
+                    h5{color: #dd7e8e !important;}
+                }
+            }
+            
+            &__illustBg{
+                width: 370px;
+                bottom: -320px;
+                right:-130px;
+                transform: translateX(0%);
+            }
+        }
+        
+        .service03{
+            .ttl-lvl3{
+                &::before{ content: "#03";} 
+            }
+            
+            &__illustBg{
+                width: 400px;
+                bottom: -240px;
+                right:-130px;
+                transform: translateX(0%);
             }
         }
     }
+}
+
+
+/*  companyProfile
+-------------------------------------------------- */
+#h-ABOUT .aboutWrap{
+    .row [class*="col"]:not(:last-child){
+        margin-bottom: 50px;
+    }
+}
+
+
+.companyProfile{
+    font-size: 1.2rem;
+    
+    dl{
+        @include --fx;
+        border-bottom: 1px solid #e9e9e9;
+    }
+    
+    dt{
+        width: 80px;
+        padding: 5px 0;
+    }
+    
+    dd{
+        font-weight: 400;
+        padding: 5px 0;
+    }
+}
+
+.businessList,
+.mediaList{
+    li{
+        font-size: 1.2rem;
+        font-weight: 400;
+        border-bottom: 1px solid #e9e9e9;
+    }
+    
+    a{
+        color: $color-t1;
+        text-decoration: underline;
+        
+        &:hover{text-decoration: none;}
+    }
+}
+
+@media (min-width: $bp-md) {
+    
 }

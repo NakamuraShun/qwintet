@@ -37,7 +37,6 @@ _layout.scss
 }
 
 
-
 /* -----------------------------------------------
 /* topPage     [h-***]
 -------------------------------------------------- */
@@ -54,62 +53,14 @@ _layout.scss
     }
 }
 
-/* #h-SERVICE
+/* #h-ABOUT
 -------------------------------------------------- */
-#h-SERVICE .serviceWrap{
+#h-ABOUT .aboutWrap{
     
-    .serviceContent{
-        padding: 200px 0px;
-        background-color: #f7f7f7;
-    }
-    
-
 }
 
 @media (min-width: $bp-md) {
-    #h-SERVICE .serviceWrap{
-        
-    }
-}
-
-/* #h-CONTACT
--------------------------------------------------- */
-#h-CONTACT .contactWrap{
-    padding:25px 0 !important;
-    color: #fff;
-    background-color: #b40015;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23922222' fill-opacity='0.75' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    
-    .l-container{
+    #h-ABOUT .l-container{
         max-width: 800px;
     }
 }
-
-/* #h-PLAN
--------------------------------------------------- */
-#h-PLAN .h-planWrap{
-    background-color: $color-g1;
-}
-
-/* #h-SEMINAR
--------------------------------------------------- */
-#h-SEMINAR {@include bgimg--cv("../../images/seminar--bg.jpg");}
-
-#h-SEMINAR .h-seminarWrap{
-    color: #fff;
-    background-color: rgba(180, 48, 48, 0.692);
-    height: inherit;
-}
-
-/* #h-PURPOSE
--------------------------------------------------- */
-#h-PURPOSE .h-purposeWrap{
-    background-color: $color-g2;
-}
-
-/* #h-METHOD
--------------------------------------------------- */
-#h-METHOD .h-methodWrap{
-    background-color: $color-g2;
-}
-
