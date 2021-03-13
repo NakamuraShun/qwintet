@@ -178,9 +178,16 @@ _typography.scss
         padding-left: 10px;
         padding-bottom: 10px;
         margin-bottom: 10px;
-        border-left: 4px solid;
-        border-image: linear-gradient( 180deg, rgb(247,15,255) 0%, rgb(18,214,223) 100%);
-        border-image-slice: 1;
+        
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -4px;
+            height: 37px;
+            width: 4px;
+            @include gradient-bg-t1;
+        }
         
         &::after{
             content: "";
@@ -202,6 +209,10 @@ _typography.scss
     @media (min-width: $bp-md) {
         .ttl-lvl4 {
             margin-bottom: 15px;
+            
+            &::before{
+                height: 40px;
+            }
         }
     }
     
