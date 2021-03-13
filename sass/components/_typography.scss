@@ -36,8 +36,9 @@ _typography.scss
     -------------------------------------------------- */
     .ttl-lvl2--mission,
     .ttl-lvl2--service,
-    .ttl-lvl2--about {
+    .ttl-lvl2--company {
         position: relative;
+        margin-top: 20px;
         margin-bottom: 60px;
         
         & > [class*="hdg-"] {
@@ -69,13 +70,13 @@ _typography.scss
     
     .ttl-lvl2--mission::before{content: 'mission';}
     .ttl-lvl2--service::before{content: 'service';}
-    .ttl-lvl2--about::before{content: 'about us';}
+    .ttl-lvl2--company::before{content: 'company';}
     
     
     @media (min-width: $bp-md) {
         .ttl-lvl2--mission,
         .ttl-lvl2--service,
-        .ttl-lvl2--about {
+        .ttl-lvl2--company {
             margin-bottom: 80px;
             
             & > [class*="hdg-"] {
@@ -116,14 +117,14 @@ _typography.scss
             }
         }
         
-        .ttl-lvl2--about{
+        .ttl-lvl2--company{
             text-align: center;
             
             &::before{ 
-                content: "about us";
+                content: "company";
                 position:absolute;
-                top: -180px;
-                right: 300px;
+                top: -188px;
+                right: 110px;
             }
             
             &::after{

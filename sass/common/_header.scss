@@ -12,7 +12,7 @@ _header.scss
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 50px;
     background-color: #fff;
     -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.50);
     box-shadow: 0 0 15px rgba(0,0,0,0.50);
@@ -27,7 +27,7 @@ _header.scss
 
 @media (min-width: $bp-md){
     .l-header{
-        height: 130px;
+        height: 50px;
     }
 }
 
@@ -36,8 +36,8 @@ _header.scss
 .logo {
     z-index: 200;
     position: absolute;
-    top: 30px;
-    left: 5px;
+    top: 26px;
+    left: 10px;
     width: 100px;
     height: 100%;
     @include fxrow-ac;
@@ -51,7 +51,7 @@ _header.scss
 
 @media (min-width: $bp-md){
     .logo {
-        top: -30px;
+        top: 0;
         left: 30px;
         
         &__img{
@@ -60,6 +60,7 @@ _header.scss
     }
 }
 
+
 /* hamburger
 -------------------------------------------------- */
 .hamburger{
@@ -67,16 +68,15 @@ _header.scss
     cursor: pointer;
     overflow: hidden;
     position: absolute;
-    top: 8px;
-    right: 5px;
+    top: 0;
+    right: 0;
     width: 50px;
-    height: 45px;
+    height: 50px;
     text-align: center;
     vertical-align: middle;
     font-size: 2.4rem;
     text-decoration: none;
-    border: 2px solid $color-t1;
-    border-radius: 5px;
+    background-color:#f9b301;
     @include fxrow-ac-jc;
     @include transition(0.3s);
 }
@@ -99,11 +99,9 @@ _header.scss
         left: 50%;
         margin-left: -12px;
         width: 24px;
-        height: 3px;
-        border-radius: 10px;
+        height: 2px;
         background-color: $color-t1;
-        -webkit-transition-duration: .1s;
-        transition-duration: .1s;
+        @include transition(.1s);
     }
 }
 
@@ -128,7 +126,9 @@ _header.scss
 }
 
 @media (min-width: $bp-md){
-    .hamburger{display: none;}
+    .hamburger {
+        display: none;
+    }
 }
 
 
@@ -141,7 +141,7 @@ _header.scss
 .l-nav {
     visibility: hidden;
     position: fixed;
-    top: 60px; // sp:l-headerのheight分下降
+    top: 50px; // sp:l-headerのheight分下降
     right: 0;
     bottom: 0;
     width: 100%;
@@ -172,7 +172,7 @@ body.is-fix .l-nav {
         opacity: 0;
         visibility: hidden;
         z-index: 100;
-        min-width: 300px;
+        min-width: 250px;
         -webkit-perspective: 500px;
         perspective: 500px;
         -webkit-transform: translateX(100px);
@@ -243,52 +243,17 @@ body.is-fix {
         &:last-child{border-bottom: 1px solid #e5e6e6;}
     }
     
-    &__lnk
-    {
-        @include fxrow-ac;
-        height: 45px;
-        padding-left: 15px;
-        color: $color-b1 !important;
-        font-size: 1.5rem;
-        font-weight: 400;
-        letter-spacing: 1px;
-    }
-    
-    &__lnk--toggle::before {
-        @include fxrow-ac-jc;
-        position: absolute;
-        top: 0;
-        right: 0;
-        content: "\e61a";
-        color: $color-t1;
-        font-family: 'themify';
-        font-size: 1.1rem;
-        height: 45px;
-        width: 45px;
-        background-color: #dadada;
-    }
-    
-    &__lnk--toggle.is-active::before {
-        content: "\e622";
-        background: #eee;
-    }
-    
-    .slideMenu {
-        display: none;
-    }
-    
-    .toggleNav {
-        background-color: #f5f5f5;
+    &__lnk{
+        @include fxcol-as-jc;
+        height: 60px;
+        padding-left: 20px;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1.7;
         
-        &__itm {
-            border-top: 1px dashed #bdbdbd;
-        }
-        
-        &__lnk{
-            @include fxrow-ac;
-            font-size: 1.2rem;
-            height: 45px;
-            padding-left: 15px;
+        p:nth-child(2){
+            font-size: 1.1rem;
         }
     }
 }
@@ -300,25 +265,6 @@ body.is-fix {
     }
 }
 
-
-.gNavSpSubInfo{
-    @include fxrow-ac;
-    @include --fxwrap;
-    padding: 20px 15px;
-    
-    &__itm{
-        width: 50%;
-        margin-bottom: 10px;
-    }
-    
-    &__lnk{
-        font-size: 1.2rem;
-        
-        span {
-            color: $color-t1;
-        }
-    }
-}
 
 
 /* globalNavPC
@@ -336,57 +282,25 @@ body.is-fix {
         height: 100%;
     }
     
-    .gNavPcSub{
-        height: 65px;
-        @include fxrow-ac-je;
-        
-        .gNavPcSubInfo{
-            width: 300px;
-            height: 30px;
-            margin-left: 25px;
-            padding: 0 10px;
-            background-color: $color-g1;
-            border: 1px solid $color-g2;
-            border-radius: 5px;
-            @include fxrow-ac-jsb;
-            
-            &__itm {
-                @include fxrow-ac-jc;
-            }
-            
-            &__lnk{
-                font-size: 1.2rem;     
-                & i{ padding-right: 5px; }
-                &:hover{ border-bottom: 1px solid $color-b1; }
-            }
-        }
-        
-        &--scroll{
-            display: none;
-        }
-    }
+    
     
     .gNavPcMain{
         position: relative;
-        height: 65px;
-        @include fxrow-ac-jsb;
+        height: 50px;
+        @include fxrow-ac-je;
         
         &__itm {
-            height: 65px;
+            margin-left: 60px;
+            height: 50px;
             @include fxrow-ac-jc;
         }
         
         &__lnk{
             display: block;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 500;
-            
-            span{
-                padding-left: 6px;
-                font-size: 1.2rem;
-                font-weight: 900;
-                color: $color-b1;
-            }
+            letter-spacing: 3px;
+            text-transform: uppercase;
             
             &::after{
                 content: "";
@@ -395,221 +309,97 @@ body.is-fix {
                 left:0;
                 width: 100%;
                 height: 3px;
-                background-color: $color-t1;
-                border-radius: 5px;
+                background-color: #f9b301;
+                border-radius: 2px;
                 @include transform-scX(0);
-                @include transition(.15s);
+                @include transition(.1s);
+            }
+            &:hover{
+                opacity: .7;
             }
             
             &:hover::after{
                 @include transform-scX(1);
             }
-            
-            &:hover span{
-                color: $color-t1;
-            }
         }
     }
     
 }
 
-.megaMenu{
-    display: none;
-    position: absolute; // from .gNavPcMain
-    top:100%;
-    left:0;
-    width: 100%;
-    
-    .megaMenuWrap{
-        padding-top: 30px !important;
-        padding-bottom: 30px !important;
-        color: #fff !important;
-        background-color: rgba(0, 0, 0, .9);
-    }
-    
-    .l-container{
-        max-width: 900px;
-    }
-}
-
-.MegaNav{
-    &__topBtn{
-        a{
-            display: inline-block;
-            padding: 5px 10px;
-            font-size: 1.8rem;
-            font-weight: 500;
-            border: 2px solid #fff;
-            border-radius: 5px;
-            color: #fff;
-            @include transition(.15s);
-            
-            &:hover{
-                background-color: #fff;
-                color: $color-t1;
-            }
-        }
-        
-        span{
-            margin-left: 10px;
-            color:$color-t1;
-        }
-    }
-    
-    &__searchBox{
-        margin-top: 30px;
-        width: 100%;
-        a{color: #fff};
-        
-        table:not(:last-child){
-            margin-bottom: 30px;
-        }
-        
-        thead{
-            border-bottom: 1px solid #fff;
-        }
-        
-        tbody{
-            margin-top: 10px;
-        }
-        
-        th{
-            padding-bottom: 10px;
-        }
-        
-        td{
-            display: inline-block;
-            padding-top: 10px;
-            padding-right: 20px;
-        }
-    }
-}
-
-
-/* searchBox
--------------------------------------------------- */
-.searchBox{
-    @include fxrow-ac-jc;
-    
-    &__searchInput{
-        width: 180px;
-        height: 30px;
-        border-radius: 5px;
-        background-color: $color-g1;
-        border-radius: 5px 0px 0px 5px;
-        border-color: $color-g2;
-        border-width: 2px;
-    }
-    
-    &__searchSubmit{
-        cursor: pointer;
-        width: 50px;
-        height: 30px;
-        margin-left: -5px;
-        border: none;
-        color: #fff;
-        background-color: $color-t1;
-        border-radius: 0px 5px 5px 0px;
-    }
-}
-
-@media (min-width: $bp-md){
-    .searchBox{
-        &__searchSubmit{
-            width: 30px;
-        }
-    }
-}
 
 /* #l-MV
 -------------------------------------------------- */
-.h-mvWrap{
-    padding-top: 110px !important; //l-headerの高さに応じて変更
-    padding-bottom: 50px !important; //l-headerの高さに応じて変更
-    @include bgimg--cv("../images/mv.jpg");
+.mv-container{
+    position: relative;
+    max-width: 2000px;
+    height: 400px;
+    margin-top: 50px;
+    @include bgimg--cv("../images/mv--sp.jpg");
 }
 
-.mvBody{
-    height: 300px;
-    padding: 15px;
-    border-radius: 10px;
-    background-color:rgba(255, 255, 255, 0.85);
+.mvContent{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    padding-right: $container-p;
+    padding-left: $container-p;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    opacity: .7;
     
-    .row{
-        height: 100%;
+    &__copyMain{
+        text-align: center;
+        color: #fff;
+        font-size: 3.2rem;
+        font-weight: 600;
+        letter-spacing: 5px;
+        line-height: 1.2;
+        text-transform: uppercase;
     }
     
-    [class*=col-] {
-        height: 100%;
+    &__copySub{
+        text-align: center;
+        color: #fff;
+        font-size: 2.0rem;
+        font-weight: 500;
+    }
+}
+
+.mvFilter{
+    width: 100%;
+    height: 100%;
+    @include gradient-bg-t1;
+    opacity: .4;
+}
+
+
+@media (min-width: $bp-md){
+    .mv-container{
+        @include bgimg--cv("../images/mv--pc.jpg");
+        height: 600px;
     }
     
     .mvContent{
-        height: 100%;
-        @include fxcol-ac-jsb;
+        position: absolute;
+        top:55%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        opacity: .75;
         
         &__copyMain{
-            text-align: center;
-            font-size: 3rem;
-            font-weight: 600;
-            line-height: 1.3;
+            text-align: left;
+            font-size: 7rem;
+            letter-spacing: 10px;
         }
         
         &__copySub{
-            font-size: 1.4rem;
-        }
-    }
-    
-    .mvPhoto{
-        display: none;
-    }
-}
-
-@media (min-width: $bp-md){
-    .h-mvWrap{
-        padding-top: 130px !important;
-        padding-bottom: 0px !important;
-        background: none;
-    }
-    
-    .mvBody{
-        height: 360px;
-        
-        .mvContent{
-            @include fxcol-as-jsb;
+            text-align: left;
+            font-size: 3rem;
+            letter-spacing: 3px;
             
-            &__copyMain{
-                text-align: left;
-                margin-top: 20px;
-                font-size: 4rem;
-                font-weight: 600;
-                letter-spacing: 3px;
-                line-height: 1.3;
-            }
-            
-            &__copySub{
-                font-size: 1.6rem;
-            }
-        }
-        
-        .mvPhoto{
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-            opacity: .9;
-            @include fxrow-ac-jc;
-            
-            &__img{
-                @include bgimg--cv("../images/mv.jpg");
-                height: 100%;
-                width: 100%;
-            }
-        }
-        
-        .wrap-btn{
-            margin-top: 0;
-            justify-content: flex-start;
         }
     }
 }

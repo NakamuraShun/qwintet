@@ -37,7 +37,7 @@ $(function ()
     });
 
     // globalnav__bg click
-    $('.globalNavSP__bg').on('click', function ()
+    $('.globalNavSP__bg, .gNavSpMain__lnk').on('click', function ()
     {
         $('.mark').removeClass('is-active');
         removeFixed();

@@ -304,6 +304,13 @@ FLEX
     @include --fxjty-around;
 }
 
+@mixin fxcol-as-jc{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxain-start;
+    @include --fxjty-center;
+}
+
 
 
 /*======================================================================
@@ -339,7 +346,6 @@ BACK-GROUND
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: #111;
     background-image: url($imagePath);
 }
 

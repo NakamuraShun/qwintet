@@ -13,7 +13,6 @@ $color-g3 : #c8c8c8;  //最後に消す
 /* thema */
 $color-t1 : #69318f;
 /* sub */
-$color-s1 : #f9b301;
 
 
 
@@ -31,7 +30,26 @@ $bp-xl: 75em;      // 1200px
 -------------------------------------------------- */
 html{
     font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+    
+    /* スクロールの幅の設定 */
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* スクロールの背景の設定 */
+    &::-webkit-scrollbar-track {
+        border-radius: 30px;
+        box-shadow: 0 0 4px #aaa inset;
+    }
+    
+    /* スクロールのつまみ部分の設定 */
+    &::-webkit-scrollbar-thumb {
+        border-radius: 30px;
+        background: #fcb90f;
+    }
 }
+
 
 /*  body
 -------------------------------------------------- */
