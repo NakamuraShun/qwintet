@@ -49,6 +49,11 @@ _card.scss
         }
     }
     
+    &__btn {
+        text-align: center;
+        margin-top: 0;
+    }
+    
     &__cat {
         position: absolute;
         top:0;
@@ -57,18 +62,6 @@ _card.scss
         @include fxrow-ac-jc;
         font-size: 1.2rem;
         background: #fff;
-    }
-    
-    .wrap-btn {margin-top: 0;}
-    .wrap-btn a {
-        min-width: 100%;
-    }
-    
-}
-
-@media (min-width: $bp-md) {  
-    .crd-office {
-        
     }
 }
 

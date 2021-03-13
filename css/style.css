@@ -1911,7 +1911,7 @@ body.is-fix .globalNavSP__bg {
 .mvContent__copyMain {
   text-align: center;
   color: #fff;
-  font-size: 3.2rem;
+  font-size: 8vw;
   font-weight: 600;
   letter-spacing: 5px;
   line-height: 1.2;
@@ -1920,7 +1920,7 @@ body.is-fix .globalNavSP__bg {
 .mvContent__copySub {
   text-align: center;
   color: #fff;
-  font-size: 2rem;
+  font-size: 5vw;
   font-weight: 500;
 }
 
@@ -2155,6 +2155,13 @@ _typography.scss
     line-height: 1.5;
   }
 }
+/* -----------------------------------------------
+/* decoration
+-------------------------------------------------- */
+.fontSize--l {
+  font-size: 1.5em;
+}
+
 /* -----------------------------------------------
 /* Title    [ttl-***]
 -------------------------------------------------- */
@@ -2401,8 +2408,9 @@ _link.scss
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 100%;
   margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 37.5em) {
@@ -2413,6 +2421,8 @@ _link.scss
 /*  btn-type
 -------------------------------------------------- */
 .btnPrim--thema {
+  max-width: 300px;
+  height: 60px;
   display: -webkit-box;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2432,8 +2442,7 @@ _link.scss
   justify-content: center;
   -webkit-user-select: none;
   position: relative;
-  min-width: 300px;
-  height: 60px;
+  width: 100%;
   color: currentColor;
   font-size: 1.5rem;
   font-weight: 400;
@@ -2534,6 +2543,10 @@ _card.scss
   font-weight: 400;
   line-height: 1.7;
 }
+.crd-office__btn {
+  text-align: center;
+  margin-top: 0;
+}
 .crd-office__cat {
   position: absolute;
   top: 0;
@@ -2558,12 +2571,6 @@ _card.scss
   justify-content: center;
   font-size: 1.2rem;
   background: #fff;
-}
-.crd-office .wrap-btn {
-  margin-top: 0;
-}
-.crd-office .wrap-btn a {
-  min-width: 100%;
 }
 
 /*
@@ -2688,6 +2695,16 @@ _page.scss
 .serviceContent .service02 .serviceService__content p,
 .serviceContent .service03 .serviceService__content p {
   text-align: left;
+}
+.serviceContent .service01 .serviceConsept__img,
+.serviceContent .service02 .serviceConsept__img,
+.serviceContent .service03 .serviceConsept__img {
+  text-align: center;
+}
+.serviceContent .service01 .serviceConsept__img img,
+.serviceContent .service02 .serviceConsept__img img,
+.serviceContent .service03 .serviceConsept__img img {
+  max-width: 100%;
 }
 .serviceContent .service01 .serviceConsept__content dl,
 .serviceContent .service02 .serviceConsept__content dl,
