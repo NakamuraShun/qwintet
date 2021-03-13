@@ -1316,10 +1316,15 @@ li img, li a, li a img {
     vertical-align: sub !important;
   }
 }
-.br-sm, .br-md, .br-lg, .br-xl {
+.br-ss, .br-sm, .br-md, .br-lg, .br-xl {
   display: none;
 }
 
+@media (min-width: 23.4375em) {
+  .br-ss {
+    display: block !important;
+  }
+}
 @media (min-width: 37.5em) {
   .br-sm {
     display: block !important;
@@ -2546,6 +2551,9 @@ _card.scss
 .crd-office__btn {
   text-align: center;
   margin-top: 0;
+}
+.crd-office__btn a {
+  max-width: 600px;
 }
 .crd-office__cat {
   position: absolute;

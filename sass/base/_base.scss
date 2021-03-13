@@ -244,7 +244,8 @@ li img, li a, li a img {
 
 
 //br
-.br-sm,.br-md,.br-lg,.br-xl{display: none;}
+.br-ss,.br-sm,.br-md,.br-lg,.br-xl{display: none;}
+@media (min-width: $bp-ss){.br-ss{display: block!important}}
 @media (min-width: $bp-sm){.br-sm{display: block!important}}
 @media (min-width: $bp-md){.br-md{display: block!important}}
 @media (min-width: $bp-lg){.br-lg{display: block!important}}
