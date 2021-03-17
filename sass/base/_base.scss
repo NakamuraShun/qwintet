@@ -50,6 +50,14 @@ html{
     }
 }
 
+/* 範囲指定の色 */
+::-moz-selection {
+    background: #fcb90f;
+}
+::selection {
+    background: #fcb90f;
+}
+
 
 /*  body
 -------------------------------------------------- */
